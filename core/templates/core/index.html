@@ -1,0 +1,41 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="slider">
+  <ul>
+    <li><img src="{% static 'core/img/slide1.jpg'%}" alt="..."></li>
+    <li><img src="{% static 'core/img/slide2.jpg'%}" alt="..."></li>
+    <li><img src="{% static 'core/img/header1.jpg'%}" alt="" /></li>
+  </ul>
+</div>
+  <div class="container-index">
+    <div class="container-circulos">
+      <div class="container-imagen">
+        <img src="{% static 'core/img/alimentos.jpg'%}" class="circulo">
+        <h2>Alimentos</h2>
+      </div>
+      <div class="container-imagen">
+        <img src="{% static 'core/img/ropa.jpg'%}" class="circulo">
+        <h2>Ropa</h2>
+      </div>
+      <div class="container-imagen">
+        <img src="{% static 'core/img/juguetes.jpg'%}" class="circulo">
+        <h2>Juguetes</h2>
+      </div>
+    </div>
+
+    <div class="ver-todo"><a class="button" href="{% url 'productos' %}">Ver productos</a></div>
+
+    <div class="container">
+      <div class="col-lg-9 offset-3">
+        <p>Por la compra de 5 productos o más puedes participar por estos increíbles Premios: </p><br><br>
+      </div>
+      <div>
+        <button id="btnVer" class="button">Ver Premios del Sorteo</button>
+        <table id="rifa"></table>
+      </div>
+     </div>
+  </div>
+{% endblock content %}
+
